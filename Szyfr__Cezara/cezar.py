@@ -1,8 +1,9 @@
 alfabet = ("A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z")
 import os
 import math
+Plik zawierający klucze, powinny być rozdzielone spacją
 klucze = open("key.txt", "r").read().split()
-# klucze do szyfru afinicznego i przesuniecia Cezara (keyA), w pliku powinny być rozdzielone spacją
+# klucze do szyfru afinicznego i przesuniecia Cezara (keyA)
 keyA = int(klucze[0])
 keyB = int(klucze[1])
 # Sprawdzamy poprawność klucza a
@@ -13,7 +14,7 @@ def odwrotnoscModulo(a, b, s0=1, s1=0):
 def error(litera):
     print("[Litera spoza alfabetu:\t", litera, "]")
     return ""
-
+# Przekształcamy polecenie wybrane z tupli "funkcje" na wywołanie funkcji
 def menu(wybor):
     funkcje[wybor]()
 
